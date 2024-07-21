@@ -15,8 +15,8 @@ const localeHead = useLocaleHead({
   addSeoAttributes: true,
 })
 
-const siteUrl = 'https://uilibhub.com'
-const ImageUrl = 'https://uilibhub.com/og.png'
+const siteUrl = 'https://mineor.xyz'
+const ImageUrl = 'https://mineor.xyz/og.png'
 
 useSeoMeta({
   title: title,
@@ -27,14 +27,6 @@ useSeoMeta({
   ogSiteName: title,
   ogUrl: siteUrl,
   ogImage: ImageUrl,
-  //
-  twitterTitle: title,
-  twitterSite: siteUrl,
-  twitterDescription: description,
-  twitterCard: 'summary_large_image',
-  twitterImage: ImageUrl,
-  twitterImageAlt: title,
-  twitterCreator: '@luobogooooo',
 })
 
 useHead({
@@ -52,14 +44,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     },
   ],
   link: (localeHead.value.link || []).filter(({ hreflang, rel }) => hreflang?.includes("-") || rel === "canonical"),
-  meta: [ ...(localeHead.value.meta || []) ],
+  meta: [...(localeHead.value.meta || [])],
 })
 </script>
 
 <style>
 .hide-scroller-g {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 .hide-scroller-g::-webkit-scrollbar {

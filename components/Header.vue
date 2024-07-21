@@ -8,19 +8,10 @@
       <div class="flex items-center justify-between">
         <div class="flex h-12 items-center gap-2">
           <div v-if="isIndex" class="md:hidden">
-            <UButton
-              icon="i-material-symbols-format-list-bulleted"
-              :square="true"
-              variant="outline"
-              @click="isMenuOpen = true"
-            />
-            <USlideover
-              @dblclick.prevent=""
-              v-model="isMenuOpen"
-              side="left"
-              :ui="{ width: 'max-w-xs' }"
-              class="md:hidden"
-            >
+            <UButton icon="i-material-symbols-format-list-bulleted" :square="true" variant="outline"
+              @click="isMenuOpen = true" />
+            <USlideover @dblclick.prevent="" v-model="isMenuOpen" side="left" :ui="{ width: 'max-w-xs' }"
+              class="md:hidden">
               <SlideoverContent>
                 <Filters />
               </SlideoverContent>
@@ -29,36 +20,18 @@
           <BrandLogo class="hidden md:flex" />
         </div>
         <div class="flex items-center justify-end gap-1 md:gap-2">
-          <UButton
-            icon="i-heroicons-outline-book-open"
-            :square="true"
-            :trailing="false"
-            variant="ghost"
-            :title="$t('userGuide')"
-            :to="localePath('/about')"
-          >
-            <!--          <span class="hidden md:inline-block">-->
-            <!--            {{ $t("userGuide") }}-->
-            <!--          </span>-->
+          <UButton icon="i-heroicons-outline-book-open" :square="true" :trailing="false" variant="ghost"
+            :title="$t('userGuide')" :to="localePath('/about')">
           </UButton>
-          <UButton
-            icon="i-mdi-github"
-            :square="true"
-            variant="ghost"
-            title="github"
-            :to="appConfig.repoUrl"
-            target="_blank"
-          />
+          <UButton icon="i-tabler-brand-blogger" :square="true" variant="ghost" :title="$t('blog')"
+            :to="appConfig.blogUrl" target="_blank" />
+          <UButton icon="i-mdi-github" :square="true" variant="ghost" title="GitHub" :to="appConfig.repoUrl"
+            target="_blank" />
           <ThemeSelector />
           <LangSelector />
-          <UButton
-            icon="i-simple-icons-buymeacoffee"
-            :square="true"
-            :trailing="false"
-            variant="ghost"
-            :to="coffeeLink"
-            target="_blank"
-          />
+          <UButton icon="i-simple-icons-buymeacoffee" :square="true" :trailing="false" variant="ghost" :to="coffeeLink"
+            target="_blank" />
+
         </div>
       </div>
     </div>

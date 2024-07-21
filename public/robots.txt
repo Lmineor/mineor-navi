@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://uilibhub.com/sitemap.xml
+Sitemap: https://mineor.xyz/sitemap.xml

@@ -1,21 +1,12 @@
 <template>
   <div
-    class="min-h-[180px] w-auto rounded-lg border border-gray-200 bg-white px-3 py-2 dark:border-gray-800 dark:bg-gray-700"
-  >
+    class="min-h-[150px] w-auto rounded-lg border border-gray-200 bg-white px-3 py-2 dark:border-gray-800 dark:bg-gray-700">
     <div class="flex h-full flex-col justify-between">
       <div class="flex items-start justify-between gap-8 px-4 py-2">
         <div class="shrink">
-          <UTooltip :text="$t('viewDetail', { name: library.name })">
-            <UButton
-              class="flex flex-col gap-3"
-              variant="ghost"
-              :padded="false"
-              color="black"
-              size="xl"
-              rel="nofollow"
-              :title="library.name"
-              :to="localePath(library.detailUrl)"
-            >
+          <UTooltip :text="library.name">
+            <UButton class="flex flex-col gap-3" variant="ghost" :padded="false" color="black" size="xl"
+              :title="library.name" :to="library.url" target="_blank" rel="nofollow">
               <div class="w-full">
                 <img :src="`/img/${logo}`" :alt="logo" class="h-12 w-12 drop-shadow-lg" />
               </div>
@@ -24,61 +15,24 @@
           </UTooltip>
           <p v-if="library.subName" class="-mt-1 text-xs">（{{ library.subName }}）</p>
         </div>
-
-        <div class="flex flex-wrap place-content-end gap-2">
-          <template v-for="buttonFilter in buttonFiltersToShow" :key="buttonFilter.id">
-            <LibraryCardBadge class="w-28" :buttonFilter="buttonFilter" />
-          </template>
+        <div class="flex flex-wrap place-content-end gap-2 ml-4">
+          <span class="text-sm">{{ library.description }}</span>
         </div>
       </div>
       <!-- Card footer -->
-      <div class="mt-4 flex items-center justify-between">
+      <div class="mt-1 flex items-center justify-between">
         <div class="ml-1 flex">
-          <UTooltip v-if="repoUrl && library.nbStars"
-                    :text="$t('goTo', { name: 'github.com' })">
-            <UButton
-              icon="i-mdi-star-outline"
-              :label="getDisplayableNumber(library.nbStars)"
-              :to="repoUrl"
-              target="_blank"
-              rel="nofollow"
-              variant="ghost"
-              color="gray"
-            />
-          </UTooltip>
-          <UTooltip v-if="registryUrl && library.nbDownloads"
-                    :text="$t('goTo', { name: 'npmjs.com' })">
-            <UButton
-              icon="i-material-symbols-download"
-              :label="getDisplayableNumber(library.nbDownloads)"
-              :to="registryUrl"
-              rel="nofollow"
-              target="_blank"
-              variant="ghost"
-              color="gray"
-            />
-          </UTooltip>
-           <UTooltip :text="$t('officialWebsite')">
-            <UButton
-              icon="i-akar-icons-link-out"
-              :to="library.url"
-              target="_blank"
-              rel="nofollow"
-              variant="ghost"
-              color="gray"
-            />
+          <UTooltip v-if="repoUrl" :text="$t('goTo', { name: 'github.com' })">
+            <UButton icon="i-mdi-github" :to="repoUrl" target="_blank" rel="nofollow" variant="ghost" color="gray" />
           </UTooltip>
         </div>
         <div class="mr-2">
-          <UButton
-              class="pointer-events-none"
-              @click="isComponentPanelOpen = true"
-              icon="i-heroicons-square-3-stack-3d"
-              size="xl"
-              :label="`${nbComponents} ${$t('componentCount')}`"
-              variant="ghost"
-              color="primary"
-            />
+          <template v-for="buttonFilter in buttonFiltersToShow" :key="buttonFilter.id">
+            <LibraryCardBadge class="w-20" :buttonFilter="buttonFilter" />
+          </template>
+          <!-- <span class="text-sm">{{ library.description }}</span> -->
+          <!-- <UButton class="pointer-events-none" @click="isComponentPanelOpen = true" icon="i-mdi-github" size="xl"
+            :label="`${nbComponents} ${$t('componentCount')}`" variant="ghost" color="primary" /> -->
         </div>
       </div>
     </div>
@@ -157,10 +111,9 @@ const logo = ((): string =>
 // Github related ------------------------------------------------------------------------
 
 const repoUrl = ((library: Library): string | undefined =>
-  library.repoName && library.repoOwner
-    ? `https://github.com/${library.repoOwner}/${library.repoName}`
+  library.github
+    ? library.github
     : undefined)(library.value)
-
 type GithubApiResponse = {
   stargazers_count: number // known and useful key
   [key: string]: unknown // unknown and useless keys
@@ -183,8 +136,8 @@ type GithubApiResponse = {
 
 const registryUrl = ((library: Library): string | undefined =>
   library.package ? `https://www.npmjs.com/package/${library.package}` : undefined)(
-  library.value
-)
+    library.value
+  )
 
 type NpmApiResponse = {
   downloads: number

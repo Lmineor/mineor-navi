@@ -15,69 +15,50 @@
 
       <div class="grid grid-cols-3 gap-10">
         <div>
-          <h3 class="text-sm mb-2 font-semibold"
-              data-dir="false">{{ $t("footerTitle1") }}</h3>
+          <h3 class="text-sm mb-2 font-semibold" data-dir="false">{{ $t("footerTitle1") }}</h3>
           <ul class="flex flex-col space-y-2">
             <li v-for="menuLink in productLinks" :key="menuLink.href">
-              <NuxtLink
-                :to="menuLink.href"
-                :title="menuLink.title"
-                target="_blank"
-                class="dark:text-slate-400 block text-sm text-gray-900"
-              >
+              <NuxtLink :to="menuLink.href" :title="menuLink.title" target="_blank"
+                class="dark:text-slate-400 block text-sm text-gray-900">
                 {{ menuLink.title }}
               </NuxtLink>
             </li>
           </ul>
         </div>
-          <div>
-          <h3 class="text-sm mb-2 font-semibold"
-              data-dir="false">{{ $t("footerTitle2") }}</h3>
+        <div>
+          <h3 class="text-sm mb-2 font-semibold" data-dir="false">{{ $t("footerTitle2") }}</h3>
           <ul class="flex flex-col space-y-2">
             <li v-for="menuLink in aboutLinks" :key="menuLink.href">
-              <NuxtLink
-                :to="localePath(menuLink.href)"
-                :title="menuLink.title"
-                class="dark:text-slate-400 block text-sm text-gray-900"
-              >
+              <NuxtLink :to="localePath(menuLink.href)" :title="menuLink.title"
+                class="dark:text-slate-400 block text-sm text-gray-900">
                 {{ menuLink.title }}
               </NuxtLink>
             </li>
           </ul>
         </div>
-          <div>
-          <h3 class="text-sm mb-2 font-semibold"
-              data-dir="false">{{ $t("footerTitle3") }}</h3>
-            <ul class="flex flex-col space-y-2">
-              <li v-for="menuLink in menuLinks" :key="menuLink.href">
-                <NuxtLink
-                  :to="localePath(menuLink.href)"
-                  :title="menuLink.title"
-                  class="dark:text-slate-400 block text-sm text-gray-900"
-                >
-                  {{ menuLink.title }}
-                </NuxtLink>
-              </li>
-            </ul>
-          </div>
+        <div>
+          <h3 class="text-sm mb-2 font-semibold" data-dir="false">{{ $t("footerTitle3") }}</h3>
+          <ul class="flex flex-col space-y-2">
+            <li v-for="menuLink in menuLinks" :key="menuLink.href">
+              <NuxtLink :to="localePath(menuLink.href)" :title="menuLink.title"
+                class="dark:text-slate-400 block text-sm text-gray-900">
+                {{ menuLink.title }}
+              </NuxtLink>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
 
     <div class="text-gray-700 dark:text-slate-400 mt-4 lg:flex lg:items-end lg:justify-between">
-      <p
-        class="text-sm lg:mt-0">
-        ©2024 UILibHub - info@uilibhub.com | Powered by<a target="_blank" href="https://github.com/ddahan/ui-libs">&nbspUI
-        Lib Picker&nbsp</a>
+      <p class="text-sm lg:mt-0">
+        ©2024 Mineor | Powered by<a target="_blank" href="https://github.com/aidevtoolkit/uilibhub">&nbspUI
+          Lib Picker&nbsp</a>
       </p>
 
       <p class="mt-4 text-sm lg:mt-0">
         Created by
-        <a
-          href="https://twitter.com/luobogooooo"
-          rel="noreferrer"
-          target="_blank"
-          class="inline-block font-medium"
-        >
+        <a href="https://twitter.com/luobogooooo" rel="noreferrer" target="_blank" class="inline-block font-medium">
           luobogor
         </a>
       </p>

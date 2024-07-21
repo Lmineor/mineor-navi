@@ -2,7 +2,7 @@
 
 English | [中文](./submission-guide-zh.md)
 
-Welcome to contribute to [UILibHub](https://uilibhub.com)! You can:
+Welcome to contribute to [UILibHub](https://mineor.xyz)! You can:
 - Recommend or self-nominate UI libraries
 - Submit websites that use UI libraries already listed on our platform (to showcase as examples)
 

@@ -8,11 +8,7 @@ export default defineNuxtConfig({
       ],
     },
   },
-  modules: [
-    "@nuxt/ui",
-    "@nuxtjs/i18n",
-    "@nuxt/content",
-  ],
+  modules: ["@nuxt/ui", "@nuxtjs/i18n", "@nuxt/content", "@nuxt/image"],
   ui: {
     global: true,
     icons: "all",
@@ -24,7 +20,7 @@ export default defineNuxtConfig({
     defaultLocale: "en",
   },
   i18n: {
-    baseUrl: "https://uilibhub.com",
+    baseUrl: "https://mineor.xyz",
     strategy: "prefix_and_default", // 添加路由前缀的方式
     locales: [
       {
@@ -74,7 +70,7 @@ export default defineNuxtConfig({
   },
   devtools: { enabled: false },
   devServer: {
-    host: '0.0.0.0', // 这允许外部访问
+    host: '127.0.0.1', // 这允许外部访问
     port: 3000 // 可选：指定端口，默认是 3000
   }
 })

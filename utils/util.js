@@ -9,7 +9,7 @@ export function addUtmParams(url) {
 
   // 要添加的参数
   const newParams = {
-    utm_source: 'uilibhub.com'
+    utm_source: 'mineor.xyz'
   };
 
   // 合并原有的参数和新的参数

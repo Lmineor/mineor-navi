@@ -9,5 +9,6 @@ export default defineAppConfig({
       popper: { placement: "top" },
     },
   },
-  repoUrl: "https://github.com/aidevtoolkit/uilibhub",
+  repoUrl: "https://github.com/Lmineor/mineor-landingpage",
+  blogUrl: "https://blog.mineor.xyz"
 })

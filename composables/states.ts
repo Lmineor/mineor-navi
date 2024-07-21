@@ -22,6 +22,8 @@ let initialButtonFiltering: { [K in ButtonFilterID]: { selected: boolean } } = {
   FVue: { selected: false },
   FReact: { selected: false },
   FForm: { selected: false },
+  FCode: {selected: false},
+  FAlgorithm:{selected:false},
 }
 
 let initialRangeFiltering: { [K in RangeFilterID]: { qty: number } } = {
@@ -30,7 +32,7 @@ let initialRangeFiltering: { [K in RangeFilterID]: { qty: number } } = {
   FNbComponents: { qty: 0 },
 }
 
-import { ButtonFilterID, RangeFilterID } from "@/types/filters.types"
+import type { ButtonFilterID, RangeFilterID } from "@/types/filters.types"
 import { buttonFilters } from "@/data/filters"
 
 export const useFilterStore = () => {

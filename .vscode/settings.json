@@ -24,7 +24,7 @@
   // color customizations
   //*********************************************************************
   "workbench.colorCustomizations": {
-    "titleBar.activeBackground": "#db2777",
+    "titleBar.activeBackground": "#090306",
     "titleBar.activeForeground": "#fff"
   },
   //*********************************************************************

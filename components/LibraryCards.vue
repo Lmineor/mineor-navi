@@ -1,30 +1,25 @@
 <template>
   <div class="flex-grow">
+    <UInput icon="i-heroicons-magnifying-glass-20-solid" size="sm" color="white" :trailing="false"
+      placeholder="Search..." v-model="searchValue" />
     <div class="mt-2.5 mb-8">
       <span class="font-bold text-primary mr-2">{{ total }}</span>{{ $t("total") }}
     </div>
     <div class="grid grid-cols-1 content-start gap-6 lg:grid-cols-2">
-      <LibraryCard
-        v-for="library in finalLibraries"
-        :key="library.name"
-        :initialLibrary="library" />
+      <LibraryCard v-for="library in finalLibraries" :key="library.name" :initialLibrary="library" />
     </div>
-    <UPagination
-      class="mt-8"
-      v-model="vPage"
-      :page-count="pageCount"
-      :total="total"
-      :to="(_page) => {
-        return {
-          path: localePath(`/p/${_page}`),
-        }
-      }"
-    />
+    <UPagination class="mt-8" v-model="vPage" :page-count="pageCount" :total="total" :to="(_page) => {
+      return {
+        path: localePath(`/p/${_page}`),
+      }
+    }" />
   </div>
 </template>
 
 <script setup lang="ts">
+import { ref, defineProps } from 'vue';
 import { getLibraries } from "@/data/libraries"
+import { useFilterStore } from "../composables/states"
 
 const { locale } = useI18n()
 const libraries = getLibraries(locale.value)
@@ -36,6 +31,7 @@ const props = defineProps({
   },
 })
 
+const searchValue = ref('')
 const vPage = ref(Number(props.page))
 const total = ref(0)
 const pageCount = ref(10)
@@ -43,6 +39,12 @@ const pageCount = ref(10)
 watch(() => vPage.value, (val) => {
   const page = localePath(`/p/${val}`)
   navigateTo(page)
+})
+
+watch(searchValue, () => {
+  // 当搜索值变化时重新计算列表和总数
+  console.log(searchValue.value)
+  finalLibraries.value = paginate(libraries, vPage.value)
 })
 
 function paginate(_libraries, _page) {
@@ -68,6 +70,11 @@ const finalLibraries = computed(() => {
     const nbComponents = library.componentCount
     /* Return true if this card should be displayed */
     const libraryFilterIDs = library.filterMatchings.map((obj) => obj.id)
+
+    // 搜索逻辑：检查库名是否包含搜索值
+    if (searchValue.value && !library.name.toLowerCase().includes(searchValue.value.toLowerCase())) {
+      return false
+    }
 
     // Check wether all the button logic is satisfied, and debranch if not
     if (isSubset(touchedButtonFilterIDs(), libraryFilterIDs) == false) {

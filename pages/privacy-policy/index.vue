@@ -6,12 +6,12 @@
 const { locale: { value: localCode } } = useI18n()
 
 const { data } = await useAsyncData(
-  `/privacy-policy/${ localCode }`,
+  `/privacy-policy/${localCode}`,
   () => queryContent('privacy-policy', localCode).findOne()
 )
 
 const { title, description } = data.value
-const finalTitle = `${title} | UILibHub`
+const finalTitle = `${title} | Mineor`
 
 useSeoMeta({
   title: finalTitle,
