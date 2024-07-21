@@ -24,4 +24,4 @@ Mineor is an intelligent navigation website built upon the open-source project U
 
 We warmly welcome your contributions to Mineor! You can:
 
-Please refer to the Submission Guide for submitting projects. (Note: If a direct English version of the submission guide is not available, please use the Chinese version as a reference and translate the necessary steps into English accordingly.)
+Please refer to the Submission Guide for submitting projects [Submission Guide](https://github.com/Lmineor/mineor-landingpage/blob/main/docs/submission-guide.md).

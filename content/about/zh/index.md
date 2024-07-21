@@ -21,4 +21,4 @@ title: 关于我们
 ## 提交网站
 欢迎为 Mineor 贡献内容！您可以：
 
-提交项目请参考[提交项目指南](https://github.com/aidevtoolkit/uilibhub/blob/main/docs/submission-guide-zh.md)。
+提交项目请参考[提交项目指南](https://github.com/Lmineor/mineor-landingpage/blob/main/docs/submission-guide-zh.md)。

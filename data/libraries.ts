@@ -42,17 +42,8 @@ export const getLibraries = (lang: string) => {
       url: addUtmParams(item.url),
       github: item.github,
       description: item.description,
-      cantPreview: item.cantPreview,
-      iframeUrl: addUtmParams(item.iframeUrl),
-      detailUrl: `/c/${item.name.toLowerCase().replace(/\s/g, "-")}`,
       showUrl: item.showUrl || item.url,
-      repoOwner: item.repoOwner,
-      repoName: item.repoName,
-      package: item.package,
-      componentCount: item.componentCount,
       filterMatchings: item.filterMatchings,
-      nbStars: item.nbStars,
-      nbDownloads: item.nbDownloads,
     }
   })
 }
