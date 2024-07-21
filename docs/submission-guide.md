@@ -26,7 +26,7 @@ Here's an example submission for Material UI:
 
 ```json
 {
-    "name": "Mineor's Blog",
+  "name": "Mineor's Blog",
   "url": "https://blog.mineor.xyz/",
   "github": "https://github.com/Lmineor/mineor.xyz",
   "description":"summary of daily coding",
