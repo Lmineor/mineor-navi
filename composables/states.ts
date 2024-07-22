@@ -1,29 +1,8 @@
 let initialButtonFiltering: { [K in ButtonFilterID]: { selected: boolean } } = {
-  FStyled: { selected: false },
-  FUnstyled: { selected: false },
-  FImported: { selected: false },
-  FPasted: { selected: false },
-  FTailwind: { selected: false },
-  FMobile: { selected: false },
-  FMiniProgram: { selected: false },
-  FComponents: { selected: false },
-  FCSS: { selected: false },
-  FAccessible: { selected: false },
-  FFigma: { selected: false },
-  FDarkMode: { selected: false },
-  FFree: { selected: false },
-  FOfficial: { selected: false },
-  FRoadmap: { selected: false },
-  FRTLSupport: { selected: false },
-  FTyped: { selected: false },
-  FBuiltinThemes: { selected: false },
-  FThemeGenerator: { selected: false },
-  FSemanticColors: { selected: false },
-  FVue: { selected: false },
-  FReact: { selected: false },
   FForm: { selected: false },
   FCode: {selected: false},
   FAlgorithm:{selected:false},
+  FTool: {selected:false}
 }
 
 let initialRangeFiltering: { [K in RangeFilterID]: { qty: number } } = {

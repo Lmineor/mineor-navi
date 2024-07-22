@@ -13,6 +13,7 @@
           <div class="grid grid-cols-2 gap-1">
             <FilterButton buttonFilterID="FCode" />
             <FilterButton buttonFilterID="FAlgorithm" />
+            <FilterButton buttonFilterID="FTool" />
           </div>
         </div>
       </template>

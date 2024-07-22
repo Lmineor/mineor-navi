@@ -5,17 +5,17 @@
       <div class="flex items-start justify-between gap-8 px-4 py-2">
         <div class="shrink">
           <UTooltip :text="library.name">
-            <UButton class="flex flex-col gap-3" variant="ghost" :padded="false" color="black" size="xl"
+            <UButton class="flex flex-col gap-3" variant="ghost" :padded="false" truncate color="black" size="xl"
               :title="library.name" :to="library.url" target="_blank" rel="nofollow">
               <div class="w-full">
                 <img :src="`/img/${logo}`" :alt="logo" class="h-12 w-12 drop-shadow-lg" />
               </div>
-              <p class="font-medium tracking-wide">{{ library.name }}</p>
+              <p class="font-medium tracking-wide w-20">{{ library.name }}</p>
             </UButton>
           </UTooltip>
           <p v-if="library.subName" class="-mt-1 text-xs">（{{ library.subName }}）</p>
         </div>
-        <div class="flex flex-wrap place-content-end gap-2 ml-4">
+        <div class="flex flex-wrap place-content-end gap-1">
           <span class="text-sm">{{ library.description }}</span>
         </div>
       </div>

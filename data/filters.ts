@@ -33,7 +33,7 @@ export const buttonFilters = [
     index: 4,
     label: "Tool",
     labelZh: "工具类",
-    icon: "i-la-reddit-alien",
+    icon: "i-fa6-solid-toolbox",
     help: "Collected Tools",
     helpZh: "收集的工具类网站",
   }

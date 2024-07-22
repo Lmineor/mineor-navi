@@ -8,12 +8,5 @@ export type Library = {
   logoDark?: string // only if the logo differs in Dark Mode
   url: string
   github?: string
-  repoOwner?: string
-  repoName?: string
-  package?: string
   filterMatchings: ButtonFilterMatching[]
-  componentCount: number
-  // componentMatchings: ComponentName[]
-  nbStars?: number // filled later
-  nbDownloads?: number // filled later
 }
