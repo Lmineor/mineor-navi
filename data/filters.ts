@@ -36,6 +36,15 @@ export const buttonFilters = [
     icon: "i-fa6-solid-toolbox",
     help: "Collected Tools",
     helpZh: "收集的工具类网站",
+  },
+  {
+    id: "FUI" as const,
+    index: 5,
+    label: "UI",
+    labelZh: "UI",
+    icon: "i-uiw-uiw",
+    help: "UI",
+    helpZh: "UI设计参考",
   }
 ]
 

@@ -11,9 +11,11 @@
       <template #mainTag>
         <div class="ml-2 flex flex-col gap-1">
           <div class="grid grid-cols-2 gap-1">
+            <FilterButton buttonFilterID="FAi" />
             <FilterButton buttonFilterID="FCode" />
             <FilterButton buttonFilterID="FAlgorithm" />
             <FilterButton buttonFilterID="FTool" />
+            <FilterButton buttonFilterID="FUI" />
           </div>
         </div>
       </template>

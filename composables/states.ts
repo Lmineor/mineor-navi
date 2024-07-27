@@ -1,8 +1,9 @@
 let initialButtonFiltering: { [K in ButtonFilterID]: { selected: boolean } } = {
-  FForm: { selected: false },
+  FAi: { selected: false },
   FCode: {selected: false},
   FAlgorithm:{selected:false},
-  FTool: {selected:false}
+  FTool: {selected:false},
+  FUI: {selected:false}
 }
 
 let initialRangeFiltering: { [K in RangeFilterID]: { qty: number } } = {
