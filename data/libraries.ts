@@ -4,6 +4,45 @@ import { addUtmParams } from "@/utils/util"
 
 export const libraries = [
   {
+    "name": "Excalidraw",
+    "logo": "excaldraw.png",
+    "url": "https://excalidraw.com/",
+    "github": "",
+    "description":"很好用的画布｜Excalidraw is a virtual collaborative whiteboard tool that lets you easily sketch diagrams that have a hand-drawn feel to them.",
+    "hot": 99,
+    "filterMatchings": [
+      {
+        "id": "FTool"
+      }
+    ],
+  },
+  {
+    "name": "中国色",
+    "logo": "zhongguose.ico",
+    "url": "https://www.zhongguose.com/",
+    "github": "",
+    "description":"很惊艳的一个网站，做UI的可以参考，有CMYK和RGB",
+    "hot": 99,
+    "filterMatchings": [
+      {
+        "id": "FUI"
+      }
+    ],
+  },
+  {
+    "name": "Kimi.ai - 帮你看更大的世界",
+    "logo": "kimi.ico",
+    "url": "https://kimi.moonshot.cn/",
+    "github": "",
+    "description":"Kimi智能助手",
+    "hot": 99,
+    "filterMatchings": [
+      {
+        "id": "FAi"
+      }
+    ],
+  },
+  {
     "name": "代码随想录",
     "logo": "programmercarl.png",
     "url": "https://programmercarl.com/",
@@ -44,6 +83,36 @@ export const libraries = [
         "id": "FTool"
       },{
         "id": "FCode"
+      },
+    ],
+  },
+  {
+    "name": "CODELF",
+    "logo": "codelf_logo.png",
+    "url": "https://unbug.github.io/codelf/",
+    "github": "",
+    "description":"变量命名",
+    "hot": 0,
+    "filterMatchings": [
+      {
+        "id": "FTool"
+      },{
+        "id": "FCode"
+      },
+    ],
+  },
+  {
+    "name": "UILibHub",
+    "logo": "uilibhub.png",
+    "url": "https://uilibhub.com/",
+    "github": "https://github.com/aidevtoolkit/uilibhub",
+    "description":"UILibHub 专注收集和分享 React、Vue 和小程序组件库的优质资源",
+    "hot": 0,
+    "filterMatchings": [
+      {
+        "id": "FCode"
+      },{
+        "id": "FUI"
       },
     ],
   },
