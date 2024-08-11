@@ -20,7 +20,7 @@
           <BrandLogo class="hidden md:flex" />
         </div>
         <div class="flex items-center justify-end gap-1 md:gap-2">
-          <UButton icon="i-material-symbols-tools-wrench-outline" :square="true" variant="ghost" :title="$t('blog')"
+          <UButton icon="i-material-symbols-tools-wrench-outline" :square="true" variant="ghost" :title="$t('tools')"
             :to="appConfig.toolUrl" target="_blank" />
           <UButton icon="i-tabler-brand-blogger" :square="true" variant="ghost" :title="$t('blog')"
             :to="appConfig.blogUrl" target="_blank" />
