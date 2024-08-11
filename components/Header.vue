@@ -20,17 +20,19 @@
           <BrandLogo class="hidden md:flex" />
         </div>
         <div class="flex items-center justify-end gap-1 md:gap-2">
+          <UButton icon="i-material-symbols-tools-wrench-outline" :square="true" variant="ghost" :title="$t('blog')"
+            :to="appConfig.toolUrl" target="_blank" />
+          <UButton icon="i-tabler-brand-blogger" :square="true" variant="ghost" :title="$t('blog')"
+            :to="appConfig.blogUrl" target="_blank" />
           <UButton icon="i-heroicons-outline-book-open" :square="true" :trailing="false" variant="ghost"
             :title="$t('userGuide')" :to="localePath('/about')">
           </UButton>
-          <UButton icon="i-tabler-brand-blogger" :square="true" variant="ghost" :title="$t('blog')"
-            :to="appConfig.blogUrl" target="_blank" />
           <UButton icon="i-mdi-github" :square="true" variant="ghost" title="GitHub" :to="appConfig.repoUrl"
             target="_blank" />
           <ThemeSelector />
           <LangSelector />
-          <UButton icon="i-simple-icons-buymeacoffee" :square="true" :trailing="false" variant="ghost" :to="coffeeLink"
-            target="_blank" />
+          <!-- <UButton icon="i-simple-icons-buymeacoffee" :square="true" :trailing="false" variant="ghost" :to="coffeeLink"
+            target="_blank" /> -->
 
         </div>
       </div>

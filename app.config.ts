@@ -10,5 +10,6 @@ export default defineAppConfig({
     },
   },
   repoUrl: "https://github.com/Lmineor/mineor-landingpage",
-  blogUrl: "https://blog.mineor.xyz"
+  blogUrl: "https://blog.mineor.xyz",
+  toolUrl: "https://tools.mineor.xyz/",
 })
