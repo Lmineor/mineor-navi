@@ -16,6 +16,7 @@
             <FilterButton buttonFilterID="FAlgorithm" />
             <FilterButton buttonFilterID="FTool" />
             <FilterButton buttonFilterID="FUI" />
+            <FilterButton buttonFilterID="FCloud" />
           </div>
         </div>
       </template>

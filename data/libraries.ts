@@ -131,7 +131,7 @@ export const libraries = [
   },
   {
     "name": "OpenStack",
-    "logo": "oepnstack.png",
+    "logo": "openstack.png",
     "url": "https://www.openstack.org/",
     "github": "https://github.com/openstack",
     "description": "OpenStack是一个开源的云计算管理平台项目，是一系列软件开源项目的组合",
