@@ -46,6 +46,16 @@ export const buttonFilters = [
     help: "UI",
     helpZh: "UI设计参考",
   }
+  ,
+  {
+    id: "FCloud" as const,
+    index: 6,
+    label: "Cloud",
+    labelZh: "Cloud",
+    icon: "i-material-symbols-cloud-outline",
+    help: "Cloud",
+    helpZh: "云计算",
+  }
 ]
 
 // export const rangeFilters = [

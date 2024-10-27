@@ -129,6 +129,19 @@ export const libraries = [
       }
     ],
   },
+  {
+    "name": "OpenStack",
+    "logo": "oepnstack.png",
+    "url": "https://www.openstack.org/",
+    "github": "https://github.com/openstack",
+    "description": "OpenStack是一个开源的云计算管理平台项目，是一系列软件开源项目的组合",
+    "hot": 99,
+    "filterMatchings": [
+      {
+        "id": "FCloud"
+      }
+    ],
+  },
 ]
 export const getSearchFilters = (lang: string) => {
   const _lang = lang === "en" ? "" : upperFirst(lang)
