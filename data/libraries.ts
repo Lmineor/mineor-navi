@@ -142,6 +142,19 @@ export const libraries = [
       }
     ],
   },
+  {
+    "name": "icones",
+    "logo": "icones.svg",
+    "url": "https://icones.js.org/",
+    "github": "",
+    "description": "很多很多的icon",
+    "hot": 99,
+    "filterMatchings": [
+      {
+        "id": "FUI"
+      }
+    ],
+  },
 ]
 export const getSearchFilters = (lang: string) => {
   const _lang = lang === "en" ? "" : upperFirst(lang)

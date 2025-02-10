@@ -1,9 +1,10 @@
 let initialButtonFiltering: { [K in ButtonFilterID]: { selected: boolean } } = {
   FAi: { selected: false },
-  FCode: {selected: false},
-  FAlgorithm:{selected:false},
-  FTool: {selected:false},
-  FUI: {selected:false}
+  FCode: { selected: false },
+  FAlgorithm: { selected: false },
+  FTool: { selected: false },
+  FUI: { selected: false },
+  FCloud: { selected: false },
 }
 
 let initialRangeFiltering: { [K in RangeFilterID]: { qty: number } } = {
@@ -44,17 +45,17 @@ export const useFilterStore = () => {
   }
 
   const touchedButtonFilterIDs = () => <ButtonFilterID[]>Object.entries(
-      buttonFiltering.value
-    )
-      // NOTE: <FilterID[]> allows a more accurate type inference
-      .filter(([_, value]) => value.selected === true)
-      .map(([key, _]) => key)
+    buttonFiltering.value
+  )
+    // NOTE: <FilterID[]> allows a more accurate type inference
+    .filter(([_, value]) => value.selected === true)
+    .map(([key, _]) => key)
 
   const touchedRangeFilterIDs = () => <RangeFilterID[]>Object.entries(
-      rangeFiltering.value
-    )
-      .filter(([_, value]) => value.qty > 0)
-      .map(([key, _]) => key)
+    rangeFiltering.value
+  )
+    .filter(([_, value]) => value.qty > 0)
+    .map(([key, _]) => key)
 
   const nbTouchedFilters = () =>
     touchedButtonFilterIDs().length + touchedRangeFilterIDs().length

@@ -6,6 +6,11 @@ export default defineNuxtConfig({
         { rel: "icon", type: "image/png", href: "/favicon.png" },
         { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
       ],
+      script: [{
+        async: true,
+        src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3895153255968429',
+        crossorigin: 'anonymous'
+      }]
     },
   },
   modules: ["@nuxt/ui", "@nuxtjs/i18n", "@nuxt/content", "@nuxt/image"],
@@ -58,8 +63,8 @@ export default defineNuxtConfig({
         // https://nuxt.com/blog/v3-5#bundler-module-resolution
         moduleResolution: "bundler",
         paths: {
-          "@": [ "." ],
-          "@/*": [ "./*" ],
+          "@": ["."],
+          "@/*": ["./*"],
         },
       },
     },
