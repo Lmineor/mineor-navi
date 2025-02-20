@@ -4,6 +4,97 @@ import { addUtmParams } from "@/utils/util"
 
 export const libraries = [
   {
+    "name": "前端配色",
+    "logo": "realtimecolort.png",
+    "url": "https://www.realtimecolors.com/",
+    "github": "",
+    "description": "有各种前端整体配色供你选择",
+    "hot": 99,
+    "filterMatchings": [
+      {
+        "id": "FTool"
+      }
+    ],
+  },
+  {
+    "name": "阿里巴巴图标库",
+    "logo": "iconfont.png",
+    "url": "https://www.iconfont.cn/",
+    "github": "",
+    "description": "风丰富的图标，来着准能找到你想要的图标",
+    "hot": 99,
+    "filterMatchings": [
+      {
+        "id": "FTool"
+      }
+    ],
+  },
+  {
+    "name": "前端渐变css",
+    "logo": "mshr.ico",
+    "url": "https://www.mshr.app/",
+    "github": "",
+    "description": "如果想要渐变效果，可以来这找找看",
+    "hot": 99,
+    "filterMatchings": [
+      {
+        "id": "FTool"
+      }
+    ],
+  },
+  {
+    "name": "Favicon图标生成器",
+    "logo": "realfavicongenerator.png",
+    "url": "https://realfavicongenerator.net/",
+    "github": "",
+    "description": "基于上传的图片，帮你生成各种尺寸的图标",
+    "hot": 99,
+    "filterMatchings": [
+      {
+        "id": "FTool"
+      }
+    ],
+  },
+  {
+    "name": "seepseek",
+    "logo": "deepseek.ico",
+    "url": "https://www.deepseek.com/",
+    "github": "https://github.com/deepseek-ai",
+    "description": "深度求索（DeepSeek），专注于研究世界领先的通用人工智能底层模型与技术和 DeepSeek AI 对话，轻松接入 API。",
+    "hot": 99,
+    "filterMatchings": [
+      {
+        "id": "FAi"
+      }
+    ],
+  },
+  {
+    "name": "工具合集",
+    "logo": "mt.png",
+    "url": "https://tools.mineor.xyz",
+    "github": "",
+    "description": "集成了好多工具，如进制转换工具、json格式化，ip地址管理等工具",
+    "hot": 99,
+    "filterMatchings": [
+      {
+        "id": "FTool"
+      }
+    ],
+  },
+  {
+    "name": "PDF-Handler",
+    "logo": "mt.png",
+    "url": "https://pdfhandler.mineor.xyz/",
+    "github": "",
+    "description": "好用的PDF处理工具，可以提取、分割和合并PDF，重要的是完全免费",
+    "hot": 99,
+    "filterMatchings": [
+      {
+        "id": "FTool"
+      }
+    ],
+  },
+  {
     "name": "Excalidraw",
     "logo": "excaldraw.png",
     "url": "https://excalidraw.com/",
