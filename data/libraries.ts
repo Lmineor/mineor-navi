@@ -5,7 +5,7 @@ import { addUtmParams } from "@/utils/util"
 export const libraries = [
   {
     "name": "前端配色",
-    "logo": "realtimecolort.png",
+    "logo": "realtimecolors.png",
     "url": "https://www.realtimecolors.com/",
     "github": "",
     "description": "有各种前端整体配色供你选择",
@@ -56,8 +56,8 @@ export const libraries = [
     ],
   },
   {
-    "name": "seepseek",
-    "logo": "deepseek.ico",
+    "name": "deepseek",
+    "logo": "deepseek.svg",
     "url": "https://www.deepseek.com/",
     "github": "https://github.com/deepseek-ai",
     "description": "深度求索（DeepSeek），专注于研究世界领先的通用人工智能底层模型与技术和 DeepSeek AI 对话，轻松接入 API。",

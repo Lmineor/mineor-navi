@@ -52,7 +52,7 @@
 
     <div class="text-gray-700 dark:text-slate-400 mt-4 lg:flex lg:items-end lg:justify-between">
       <p class="text-sm lg:mt-0">
-        ©2024 Mineor | Powered by<a target="_blank" href="https://github.com/aidevtoolkit/uilibhub">&nbspUI
+        ©2025 Mineor | Powered by<a target="_blank" href="https://github.com/aidevtoolkit/uilibhub">&nbspUI
           Lib Picker&nbsp</a>
       </p>
 
