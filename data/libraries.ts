@@ -4,6 +4,19 @@ import { addUtmParams } from "@/utils/util"
 
 export const libraries = [
   {
+    "name": "Manus",
+    "logo": "manus.png",
+    "url": "https://manus.im/",
+    "github": "",
+    "description": "Manus是一款通用人工智能助手，能够将思维与行动完美结合：它不仅善于思考，更能将思考转化为实际成果。无论是在工作还是生活中，Manus都能出色地完成各种任务，让您在轻松休息的同时，一切事务尽在掌控",
+    "hot": 99,
+    "filterMatchings": [
+      {
+        "id": "FAi"
+      }
+    ],
+  },
+  {
     "name": "前端配色",
     "logo": "realtimecolors.png",
     "url": "https://www.realtimecolors.com/",
